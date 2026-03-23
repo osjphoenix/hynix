@@ -1,10 +1,10 @@
-# 🔥 GitHub Trending 종합 조사 보고서 (2026년 3월)
+# 🔥 GitHub Trending + AI 임베디드 작품 종합 조사 (2026년 3월)
 
-> 조사일: 2026-03-23 | 출처: GitHub Trending (전체 / Python / JavaScript / TypeScript)
+> 조사일: 2026-03-23 | 출처: GitHub Trending (전체 / Python / JavaScript / TypeScript) + AI 임베디드 작품 리서치
 
 ---
 
-## 📊 현재 핫한 분야 요약
+## 📊 현재 핫한 분야 요약 (GitHub Trending)
 
 | 순위 | 분야 | 키워드 | 트렌드 강도 |
 |------|------|--------|------------|
@@ -250,5 +250,265 @@ LLM이 영수증·거래 내역을 자동 분석·분류하는 셀프호스팅 �
 
 ---
 
+## 🤖 AI 임베디드 작품 조사
+
+### 📊 AI 임베디드 분야 요약
+
+| 분야 | 플랫폼 | 난이도 | 추천도 |
+|------|--------|--------|--------|
+| 🧠 TinyML / Edge AI | ESP32, Arduino Nano 33 BLE | ⭐⭐ | ⭐⭐⭐⭐⭐ |
+| 🦾 AI 로봇팔 | Servo Motor + RPi/Arduino | ⭐⭐⭐ | ⭐⭐⭐⭐⭐ |
+| 🚗 자율주행 RC카 | RPi + Camera + Motor | ⭐⭐⭐ | ⭐⭐⭐⭐⭐ |
+| 🪞 AI 스마트 미러 | RPi + MagicMirror² | ⭐⭐ | ⭐⭐⭐⭐ |
+| 🗣️ AI 음성 비서 | RPi + Whisper + LLM | ⭐⭐⭐ | ⭐⭐⭐⭐⭐ |
+| ✈️ AI 드론 | RPi + Coral TPU + YOLOv8 | ⭐⭐⭐⭐ | ⭐⭐⭐⭐ |
+| 🏠 AI 스마트홈 | ESP32 + Home Assistant | ⭐⭐ | ⭐⭐⭐⭐ |
+| 📷 AI 카메라 / 비전 | ESP32-CAM, RPi Camera | ⭐⭐ | ⭐⭐⭐⭐⭐ |
+| 🌱 AI 스마트 농업 | Arduino + 센서 + ML | ⭐⭐ | ⭐⭐⭐ |
+| 🩺 AI 헬스케어 웨어러블 | Arduino + 생체 센서 | ⭐⭐⭐ | ⭐⭐⭐⭐ |
+| 🔒 AI 오프라인 서바이벌 PC | RPi + 로컬 LLM | ⭐⭐ | ⭐⭐⭐ |
+
+---
+
+### 1. 🧠 TinyML / Edge AI (마이크로컨트롤러 위에서 AI 추론)
+
+> MCU에서 직접 ML 모델을 돌려 실시간 추론. 클라우드 불필요, 초저전력.
+
+#### 핵심 프로젝트
+
+| 프로젝트 | 설명 | GitHub |
+|---------|------|--------|
+| **TensorFlow Lite Micro (TFLM)** | 마이크로컨트롤러용 TensorFlow Lite 공식 포트 | [tensorflow/tflite-micro](https://github.com/tensorflow/tflite-micro) |
+| **Edge Impulse** | 데이터 수집 → 학습 → 배포까지 올인원 TinyML 플랫폼 | [edgeimpulse](https://github.com/edgeimpulse) |
+| **EloquentTinyML** | Arduino IDE에서 TFLite 모델을 쉽게 배포 | [eloquentarduino/EloquentTinyML](https://github.com/eloquentarduino/EloquentTinyML) |
+| **Arduino ML Tools** | Arduino 공식 ML 라이브러리 & 예제 | [arduino/ArduinoTensorFlowLiteTutorials](https://github.com/arduino/ArduinoTensorFlowLiteTutorials) |
+
+#### 작품 아이디어
+
+| 작품명 | 설명 | 하드웨어 |
+|--------|------|----------|
+| **제스처 인식 리모컨** | 가속도 센서로 손동작 인식 → 가전 제어 | Arduino Nano 33 BLE + IMU |
+| **이상 소리 감지기** | 공장 기계 소리를 학습해 이상 감지 | ESP32 + I2S 마이크 |
+| **키워드 음성 인식** | "불 켜", "불 꺼" 등 간단한 명령 인식 | ESP32 + MEMS 마이크 |
+| **낙상 감지 장치** | 가속도+자이로 데이터로 낙상 판별 | Arduino Nano 33 BLE |
+| **사람 감지 카메라** | ESP32-CAM에서 MobileNet으로 사람 검출 | ESP32-CAM |
+
+---
+
+### 2. 🦾 AI 로봇팔 (모방 학습 / 강화학습)
+
+> AI가 사람의 동작을 모방하거나, 스스로 학습해 물체를 집는 로봇팔.
+
+| 프로젝트 | 설명 | GitHub |
+|---------|------|--------|
+| **HuggingFace LeRobot** | HuggingFace의 오픈소스 로봇 프레임워크. 모방학습·강화학습·VLA 모델 지원. 다양한 로봇팔과 호환 | [huggingface/lerobot](https://github.com/huggingface/lerobot) |
+| **SO-ARM100** | 3D 프린터로 제작 가능한 오픈소스 로봇팔. 메이커·연구자·AI 개발자 대상 | [TheRobotStudio/SO-ARM100](https://github.com/TheRobotStudio/SO-ARM100) |
+| **Spider (Meta)** | 인간 모션 → 휴머노이드/로봇 핸드로 리타겟팅하는 물리 시뮬레이션 프레임워크 | [facebookresearch/spider](https://github.com/facebookresearch/spider) |
+
+#### 작품 아이디어
+
+| 작품명 | 설명 | 하드웨어 |
+|--------|------|----------|
+| **AI 분류 로봇팔** | 카메라로 색상/모양 분류 → 서보 로봇팔이 분류 | RPi + 카메라 + 서보모터 |
+| **모방학습 로봇팔** | 사람의 팔 동작을 카메라로 학습 → 재현 | LeRobot + SO-ARM100 |
+
+---
+
+### 3. 🚗 자율주행 RC카 / 자동차
+
+> 카메라·LiDAR로 차선/장애물을 인식하고 자율 주행하는 프로젝트.
+
+| 프로젝트 | 설명 | GitHub |
+|---------|------|--------|
+| **Autoware** | ROS 기반 풀스택 자율주행 소프트웨어. 인식→판단→제어 전 과정 | [autowarefoundation/autoware](https://github.com/autowarefoundation/autoware) |
+| **openpilot (comma.ai)** | 325개 이상 차량 모델 지원 ADAS. 차선 유지, ACC, 운전자 모니터링 | [commaai/openpilot](https://github.com/commaai/openpilot) |
+| **DonkeyCar** | 오픈소스 DIY 자율주행 RC카 플랫폼 (가장 대중적) | [autorope/donkeycar](https://github.com/autorope/donkeycar) |
+| **End-to-end AD 리서치** | E2E 자율주행 논문·벤치마크 모음 | [OpenDriveLab/End-to-end-Autonomous-Driving](https://github.com/OpenDriveLab/End-to-end-Autonomous-Driving) |
+
+#### 작품 아이디어 (RC카 규모)
+
+| 작품명 | 설명 | 하드웨어 |
+|--------|------|----------|
+| **AI 자율주행 RC카** | 카메라 영상 기반 차선 인식 + 자율 주행 | RPi + Pi Camera + DC/Servo |
+| **장애물 회피 로봇** | 초음파+카메라 융합으로 장애물 회피 | Arduino + 초음파 + 모터 |
+
+---
+
+### 4. 🪞 AI 스마트 미러
+
+> 거울에 날씨·뉴스·일정 표시 + 얼굴/제스처 인식으로 인터랙션.
+
+| 프로젝트 | 설명 | GitHub |
+|---------|------|--------|
+| **MagicMirror²** | 가장 유명한 오픈소스 스마트 미러 플랫폼. 모듈 확장 무한 | [MagicMirrorOrg/MagicMirror](https://github.com/MagicMirrorOrg/MagicMirror) |
+| **AI Smart Mirror** | MagicMirror + AI 얼굴인식 + 음성인식 통합 | [HackerShackOfficial/Smart-Mirror](https://github.com/HackerShackOfficial/Smart-Mirror) |
+
+#### 작품 아이디어
+
+| 작품명 | 설명 | 하드웨어 |
+|--------|------|----------|
+| **제스처 제어 스마트미러** | MediaPipe 손 인식 → 스와이프/탭으로 페이지 전환 | RPi + 카메라 + 양면 거울 |
+| **얼굴인식 개인화 미러** | 사용자별 맞춤 정보 표시 (일정, 뉴스 등) | RPi + Pi Cam + OpenCV |
+
+---
+
+### 5. 🗣️ AI 음성 비서 (로컬 LLM 기반)
+
+> 클라우드 없이 로컬에서 동작하는 AI 음성 비서. 프라이버시 최강.
+
+| 프로젝트 | 설명 | GitHub |
+|---------|------|--------|
+| **Local LLM Assistant** | RPi 4에서 100% 로컬 실행. Whisper(STT) + TinyLlama(LLM) + eSpeak(TTS) | [nickbild/local_llm_assistant](https://github.com/nickbild/local_llm_assistant) |
+| **Local-Voice** | Linux/RPi용 오프라인 음성비서. Ollama + Vosk + Piper TTS | [m15-ai/Local-Voice](https://github.com/m15-ai/Local-Voice) |
+| **echoOLlama** | 로컬 LLM 기반 실시간 음성 AI 플랫폼. WebSocket 스트리밍 | [echoOLlama/echoOLlama](https://github.com/echoOLlama/echoOLlama) |
+
+#### 작품 아이디어
+
+| 작품명 | 설명 | 하드웨어 |
+|--------|------|----------|
+| **로컬 AI 스피커** | 웨이크워드 → Whisper STT → 로컬 LLM → Piper TTS 파이프라인 | RPi 4/5 + 마이크 + 스피커 |
+| **AI 비서 + 스마트홈** | 음성 명령 → LLM 해석 → Home Assistant로 가전 제어 | RPi + ESP32 (릴레이) |
+
+---
+
+### 6. ✈️ AI 드론 (컴퓨터비전 + 자율비행)
+
+> AI로 도로 손상 감지, 물체 추적, 자율 비행을 수행하는 드론.
+
+| 프로젝트 | 설명 | GitHub |
+|---------|------|--------|
+| **ai-drone-ws2526** | YOLOv8 기반 도로 손상 감지 FPV 드론. RPi + Coral TPU 엣지 추론 | [ai-drone-ws2526](https://github.com/ai-drone-ws2526) |
+| **Autonomous-UAVs** | 자율 드론용 오픈소스 알고리즘 큐레이션 (SLAM, 경로 계획, 네비게이션) | [alexkoven/Autonomous-UAVs](https://github.com/alexkoven/Autonomous-UAVs) |
+| **Autonomous AI Drone** | 센서 → AI 모델 → 제어 명령 직접 생성. 장애물 회피 + 타겟 추적 | [sieuwe1/Autonomous-Ai-drone-scripts](https://github.com/sieuwe1/Autonomous-Ai-drone-scripts) |
+
+---
+
+### 7. 🏠 AI 스마트홈 / IoT
+
+> ESP32 + Home Assistant + AI로 지능형 스마트홈 구축.
+
+| 프로젝트 | 설명 | GitHub |
+|---------|------|--------|
+| **Home Assistant** | 오픈소스 홈 자동화 플랫폼. AI 통합(음성, 자동화 규칙) 지원 | [home-assistant/core](https://github.com/home-assistant/core) |
+| **ESPHome** | ESP32/8266을 YAML 설정만으로 스마트 디바이스화 | [esphome/esphome](https://github.com/esphome/esphome) |
+| **MindEase** | ESP32 + AI를 결합한 정신 건강 어시스턴트 (오디오 입출력) | GitHub 검색: MindEase ESP32 |
+
+#### 작품 아이디어
+
+| 작품명 | 설명 | 하드웨어 |
+|--------|------|----------|
+| **AI 에너지 절약 시스템** | 전력 사용 패턴을 ML로 학습 → 자동 전원 관리 | ESP32 + 전류 센서 + 릴레이 |
+| **AI 침입 탐지** | PIR + 카메라 + 사람 감지 ML 모델로 침입 알림 | ESP32-CAM + PIR + 부저 |
+
+---
+
+### 8. 📷 AI 카메라 / 컴퓨터비전 디바이스
+
+> 임베디드 카메라 위에서 실시간 객체 감지 / 분류 수행.
+
+| 프로젝트 | 설명 | 하드웨어 |
+|---------|------|----------|
+| **ESP32-CAM + 사람 감지** | MobileNet 양자화 모델로 사람 감지 | ESP32-CAM |
+| **RPi + Hailo AI HAT** | RPi 5에 Hailo AI 가속기 장착 → 실시간 객체 감지 | RPi 5 + Hailo-8L |
+| **OpenMV Cam** | 마이크로파이썬 기반 비전 모듈. 바코드/얼굴/색상/QR 인식 | OpenMV H7 Plus |
+| **JeVois** | TensorFlow 내장 카메라 모듈. 33종 비전 모듈 탑재 | JeVois-A33 |
+| **Google Coral USB** | TPU 기반 엣지 AI 추론 가속기 (RPi와 결합) | Coral USB + RPi |
+
+#### 작품 아이디어
+
+| 작품명 | 설명 | 하드웨어 |
+|--------|------|----------|
+| **AI 쓰레기 분류기** | 카메라로 쓰레기 종류 분류 → 해당 칸으로 이동 | RPi + Camera + 서보 |
+| **실시간 마스크 감지** | 마스크 착용 여부 판별 + 알림 | ESP32-CAM + OLED |
+| **번호판 인식 주차 시스템** | 차량 번호판 OCR → 출입 관리 | RPi + Camera + 차단기 |
+
+---
+
+### 9. 🌱 AI 스마트 농업
+
+| 작품명 | 설명 | 하드웨어 |
+|--------|------|----------|
+| **AI 작물 질병 진단** | 카메라로 잎 촬영 → CNN 모델로 질병 판별 | RPi + Camera |
+| **자동 관수 시스템** | 토양 습도 + 날씨 데이터 → ML 예측 → 자동 물 공급 | ESP32 + 습도센서 + 펌프 |
+| **해충 탐지 트랩** | 카메라로 해충 촬영 → YOLO 감지 → 카운트 | ESP32-CAM + LED |
+
+---
+
+### 10. 🩺 AI 헬스케어 / 웨어러블
+
+| 작품명 | 설명 | 하드웨어 |
+|--------|------|----------|
+| **심박 이상 감지** | PPG 센서 데이터 → TinyML로 부정맥 패턴 감지 | Arduino + MAX30102 |
+| **자세 교정 디바이스** | IMU 센서로 척추 각도 측정 → 나쁜 자세 시 진동 알림 | Arduino Nano 33 BLE + 진동모터 |
+| **수면 품질 분석기** | 가속도+심박+온도 → 수면 단계 분류 | ESP32 + 생체센서 |
+
+---
+
+### 11. 🔒 오프라인 AI 서바이벌 PC
+
+| 프로젝트 | 설명 | GitHub |
+|---------|------|--------|
+| **Project N.O.M.A.D** | 오프라인 생존 컴퓨터. AI·도구·의학 지식·지도 등을 인터넷 없이 패키징 | [Crosstalk-Solutions/project-nomad](https://github.com/Crosstalk-Solutions/project-nomad) |
+
+---
+
+## 🛠️ 임베디드 AI 핵심 기술 스택
+
+### 하드웨어 플랫폼 비교
+
+| 플랫폼 | AI 성능 | 가격 | 적합 분야 |
+|--------|---------|------|-----------|
+| **ESP32** | ★☆☆☆ (TinyML만) | ~₩5,000 | 초저전력 센서 AI, IoT |
+| **ESP32-CAM** | ★★☆☆ | ~₩8,000 | 간단한 이미지 분류 |
+| **Arduino Nano 33 BLE** | ★★☆☆ | ~₩30,000 | 모션/음성 TinyML |
+| **Raspberry Pi 4/5** | ★★★☆ | ~₩70,000~100,000 | 비전, LLM, 종합 AI |
+| **RPi + Coral USB TPU** | ★★★★ | ~₩130,000 | 실시간 객체 감지 |
+| **RPi + Hailo AI HAT** | ★★★★★ | ~₩150,000+ | 고성능 엣지 비전 AI |
+| **NVIDIA Jetson Nano** | ★★★★ | ~₩150,000 | 딥러닝 추론, 로봇 |
+| **OpenMV Cam** | ★★★☆ | ~₩80,000 | 독립형 비전 디바이스 |
+
+### 소프트웨어 / 프레임워크
+
+| 도구 | 용도 | 대상 하드웨어 |
+|-----|------|-------------|
+| **TensorFlow Lite Micro** | 마이크로컨트롤러 ML 추론 | ESP32, Arduino |
+| **Edge Impulse** | 데이터 수집→학습→배포 올인원 | ESP32, Arduino, RPi |
+| **MediaPipe** | 손/얼굴/포즈 인식 (실시간) | RPi, Jetson |
+| **YOLO (v8/v11)** | 실시간 객체 감지 | RPi + 가속기, Jetson |
+| **OpenCV** | 컴퓨터비전 기본 라이브러리 | 모든 플랫폼 |
+| **Whisper** | 음성→텍스트 (STT) | RPi 4/5 |
+| **Ollama** | 로컬 LLM 실행 (Llama, Mistral 등) | RPi 5, Jetson |
+| **Piper TTS** | 오프라인 텍스트→음성 (TTS) | RPi, Linux |
+| **ESPHome** | ESP 디바이스를 YAML로 설정 | ESP32/8266 |
+
+---
+
+## ⭐ 동아리/대회 추천 TOP 5 임베디드 AI 작품
+
+> 구현 가능성 + 임팩트 + AI 활용도 기준 선정
+
+| 순위 | 작품명 | 핵심 기술 | 추천 이유 |
+|------|--------|-----------|-----------|
+| 1 | **AI 음성 비서 스피커** | RPi + Whisper + LLM + TTS | 완전 로컬 AI, 프라이버시, 임팩트 최강 |
+| 2 | **AI 쓰레기 자동 분류기** | RPi + YOLO + 서보모터 | 비전AI + 임베디드 + 사회적 가치 |
+| 3 | **제스처 인식 스마트 리모컨** | Arduino + TinyML + IMU | 저비용, TinyML 핵심 학습 |
+| 4 | **AI 자율주행 RC카** | RPi + Camera + DonkeyCar | 자율주행 입문, 대회 다수 |
+| 5 | **AI 로봇팔 (모방학습)** | LeRobot + SO-ARM100 | HuggingFace 생태계, 최신 트렌드 |
+
+---
+
+## 📚 학습 참고 자료
+
+| 자료 | 설명 | 링크 |
+|-----|------|------|
+| HuggingFace LeRobot 문서 | 로봇 AI 프레임워크 공식 문서 | [huggingface/lerobot](https://github.com/huggingface/lerobot) |
+| Edge Impulse Docs | TinyML 올인원 플랫폼 튜토리얼 | [docs.edgeimpulse.com](https://docs.edgeimpulse.com) |
+| DonkeyCar Docs | 자율주행 RC카 빌드 가이드 | [docs.donkeycar.com](https://docs.donkeycar.com) |
+| TinyML 한국어 자료 | 네이버 카페/블로그 TinyML 커뮤니티 | 검색: "TinyML 한국어" |
+| awesome-edge-ml | 엣지 ML 리소스 큐레이션 | [GitHub topic: embedded-machine-learning](https://github.com/topics/embedded-machine-learning) |
+
+---
+
 > 📅 본 문서는 2026년 3월 23일 GitHub Trending 기준으로 작성되었습니다.
 > 트렌드는 빠르게 변화하므로 [GitHub Trending](https://github.com/trending)에서 최신 정보를 확인하세요.
+
