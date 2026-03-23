@@ -509,6 +509,202 @@ LLM이 영수증·거래 내역을 자동 분석·분류하는 셀프호스팅 �
 
 ---
 
+## ⭐ GitHub 고스타 AI 임베디드 대표 프로젝트 (추가 조사)
+
+> ⭐ Stars 기준 정렬 | 실제 구현 가능한 임베디드 AI 레퍼런스
+
+| 프로젝트 | 분야 | 설명 | ⭐ Stars |
+|---------|------|------|---------|
+| [commaai/openpilot](https://github.com/commaai/openpilot) | 자율주행 | 325개 이상 차량 지원 ADAS. 차선 유지·ACC·운전자 모니터링. 차량 OBD-II 연결 | 60,400 |
+| [huggingface/lerobot](https://github.com/huggingface/lerobot) | 로봇팔/로보틱스 | HuggingFace 로봇 AI 프레임워크. 모방학습·RL·VLA 모델. PyTorch 기반 | 22,600 |
+| [ultralytics/ultralytics](https://github.com/ultralytics/ultralytics) | 객체 감지 | YOLO v8/v11. RPi·Jetson·ESP32-CAM 모두 지원. Pip 설치 한 줄 | 40,000+ |
+| [google-ai-edge/mediapipe](https://github.com/google-ai-edge/mediapipe) | 비전 AI | Google 실시간 손/얼굴/포즈 인식. RPi, Android, Web 지원 | 29,000+ |
+| [opencv/opencv](https://github.com/opencv/opencv) | 컴퓨터비전 | 컴퓨터비전 기본 라이브러리. 모든 임베디드 플랫폼 지원 | 80,000+ |
+| [autorope/donkeycar](https://github.com/autorope/donkeycar) | 자율주행 RC카 | 오픈소스 DIY 자율주행 RC카. RPi + 카메라로 트랙 자율 주행 | 3,400 |
+| [ros-navigation/navigation2](https://github.com/ros-navigation/navigation2) | 로봇 내비게이션 | ROS2 기반 자율이동 내비게이션 스택. AMR(자율이동로봇) | 4,000 |
+| [TheRobotStudio/SO-ARM100](https://github.com/TheRobotStudio/SO-ARM100) | 로봇팔 | 3D 프린터 제작 가능한 오픈소스 로봇팔. LeRobot과 통합 | - |
+| [tensorflow/tflite-micro](https://github.com/tensorflow/tflite-micro) | TinyML | MCU용 TensorFlow Lite. ESP32·Arduino 공식 지원 | 2,000+ |
+| [nvidia-isaac/isaac_ros](https://github.com/NVIDIA-ISAAC-ROS/isaac_ros_common) | Jetson AI | NVIDIA Isaac ROS. Jetson 플랫폼 AI 로봇 개발 환경 | 1,500+ |
+
+### 📌 분야별 GitHub 추가 추천 프로젝트
+
+#### 🤖 오픈소스 휴머노이드 로봇
+
+| 프로젝트 | 설명 | GitHub |
+|---------|------|--------|
+| **OpenArm** | 7-DOF 컴플라이언트 휴머노이드 팔. ROS2 + Mujoco 통합 | [GitHub: OpenArm](https://github.com/search?q=OpenArm+robot) |
+| **HumanoidVerse3** | 휴머노이드 로코모션~모션 트래킹 올인원 프로젝트 | [GitHub: HumanoidVerse](https://github.com/search?q=HumanoidVerse) |
+| **NVIDIA Isaac GR00T** | NVIDIA 휴머노이드 재단 모델 플랫폼. 인지·제어·시뮬레이션 | [NVIDIA-ISAAC-ROS](https://github.com/NVIDIA-ISAAC-ROS) |
+
+#### 🎥 실시간 비전 AI 콤보 프로젝트
+
+| 조합 | 설명 | 적용 예시 |
+|-----|------|-----------|
+| **MediaPipe + OpenCV + Arduino** | 손 랜드마크 감지 → 시리얼로 Arduino 제어 | LED·서보·모터 제스처 제어 |
+| **YOLOv8 + RPi + Servo** | 실시간 객체 감지 → 서보로 카메라/팔 추적 | 사람 추적 카메라 |
+| **YOLOv8 + Coral TPU** | TPU 가속 실시간 객체 감지. RPi와 USB 연결 | 드론·자율주행 |
+| **Whisper + Ollama + ESP32** | RPi에서 STT→LLM→시리얼→ESP32 릴레이 제어 | 음성 스마트홈 |
+| **Edge Impulse + Arduino Nano** | 클라우드 학습 → MCU 배포. 제스처·이상감지 | 공모전 TinyML |
+
+---
+
+## 🔬 Arduino UNO Q 완전 분석 (공모전 필독)
+
+> 2025년 10월 공개된 Arduino의 혁신작. 마이크로프로세서 + 마이크로컨트롤러 듀얼 아키텍처.
+> **출시 예정: 2026년 Q2** | [공식 페이지](https://www.arduino.cc/uno-q)
+
+---
+
+### 🖥️ 핵심 사양
+
+| 항목 | 사양 |
+|------|------|
+| **마이크로프로세서 (MPU)** | Qualcomm Dragonwing QRB2210 (ARM Cortex-A55) |
+| **마이크로컨트롤러 (MCU)** | STMicroelectronics STM32U585 |
+| **OS** | Linux Debian (MPU) + Zephyr OS with Arduino Core (MCU) |
+| **RAM** | 16 GB |
+| **저장공간** | 64 GB (확장 가능) |
+| **NPU 성능** | **최대 40 TOPS** (Tera Operations Per Second) |
+| **연결성** | MIPI-CSI 다중 카메라 · 2.5 Gb Ethernet · 고급 오디오 · 디스플레이 |
+| **호환성** | UNO 쉴드 및 전체 Arduino 액세서리 호환 |
+| **AI 가속** | Qualcomm AI Hub NPU (CPU·GPU·NPU 가속) |
+
+---
+
+### 🧩 Arduino App Lab (전용 IDE)
+
+> UNO Q 전용 통합 개발 환경. PC 또는 UNO Q 자체에서 실행 가능.
+
+```
+┌─────────────────────────────────────────────────────┐
+│              Arduino App Lab                         │
+│                                                     │
+│  ┌───────────────┐  ┌─────────────┐  ┌──────────┐  │
+│  │  Python 코드  │  │  AI 모델    │  │  Bricks  │  │
+│  │  (Linux MPU)  │  │  (NPU 가속) │  │  (모듈)  │  │
+│  └───────────────┘  └─────────────┘  └──────────┘  │
+│  ┌───────────────────────────────────────────────┐  │
+│  │         Arduino Sketch (실시간 MCU 제어)       │  │
+│  └───────────────────────────────────────────────┘  │
+└─────────────────────────────────────────────────────┘
+```
+
+#### App Lab 3가지 구성 요소
+
+| 구성 요소 | 역할 | 설명 |
+|-----------|------|------|
+| **Python Programs** | 고수준 로직 | Linux MPU에서 실행. AI 추론·네트워크·데이터 처리 |
+| **Arduino Sketches** | 실시간 하드웨어 제어 | MCU에서 실행. 센서·모터·PWM·인터럽트 정밀 제어 |
+| **Bricks** | 모듈형 컴포넌트 | AI 모델·웹서버·API 클라이언트를 코딩 없이 조합 |
+
+---
+
+### 🧱 App Lab Bricks 목록
+
+> Bricks = 복잡한 AI 기능을 API 한 줄로 쓸 수 있는 모듈 블록
+
+| Brick 이름 | 기능 | 활용 예시 |
+|-----------|------|-----------|
+| **Detect Objects Brick** | 실시간 객체 감지 (카메라) | 얼굴 감지, 물체 분류 |
+| **Video Object Detection Brick** | 영상 스트림 객체 감지 | CCTV, 로봇 비전 |
+| **Face Detection Brick** | 얼굴 위치·개수 감지 | 출입 제어, 집중도 모니터링 |
+| **LLM Brick (Cloud)** | 클라우드 LLM 연동 | GPT-4o, Claude, Gemini API 호출 |
+| **LLM Brick (Local)** | 로컬 LLM 실행 | 오프라인 AI 비서, 프라이버시 |
+| **Web Server Brick** | 내장 웹 서버 | 센서 데이터 대시보드, 원격 제어 |
+| **API Client Brick** | 외부 REST API 연결 | 날씨, 뉴스, 데이터베이스 |
+| **Edge Impulse Brick** | 커스텀 TinyML 배포 | 직접 학습한 모델 바로 실행 |
+| **Bedtime Story Teller** | 생성형 AI 예제 | VLM + TTS로 동화 생성 |
+
+---
+
+### 🤖 Qualcomm AI Hub 사용 가능 모델
+
+> UNO Q NPU에서 직접 실행 가능한 사전 최적화 AI 모델
+
+#### 📷 컴퓨터 비전
+
+| 모델 | 기능 | 활용 |
+|-----|------|------|
+| **YOLOv8 / YOLOv11** | 실시간 다중 객체 감지 | 로봇 비전, 드론, RC카 |
+| **MobileNet v3** | 경량 이미지 분류 | 제품 분류, 식물 판별 |
+| **MediaPipe Pose Landmark** | 전신 포즈 133 관절 추적 | 운동 분석, 재활 |
+| **HRNetPose** | 고정밀 인체 포즈 추정 | 모션 캡처 |
+| **RTMPose-Body2d** | 133 관절 위치·신뢰도 감지 | 스포츠 분석 |
+| **Track-Anything** | 영상 내 임의 객체 인터랙티브 추적 | 물체 추적 로봇 |
+| **SAM (Segment Anything)** | 범용 이미지 분할 | 의료 영상, 농업 |
+
+#### 🎙️ 음성 / 오디오
+
+| 모델 | 기능 | 활용 |
+|-----|------|------|
+| **Whisper-Tiny / Small / Base** | 다국어 음성인식 (STT) | 음성 비서, 자막 생성 |
+| **WavLM-Base-Plus** | 음성 특징 추출 | 화자 인식, 감정 분석 |
+
+#### 🧠 언어 / 생성형 AI
+
+| 모델 | 기능 | 활용 |
+|-----|------|------|
+| **로컬 LLM (TinyLlama, Phi 등)** | 온디바이스 LLM 추론 | 완전 오프라인 AI 비서 |
+| **Qwen3-VL (VLM)** | 비전+언어 통합 모델 | 이미지 Q&A, 로봇 슬립 감지 |
+
+---
+
+### 🛠️ UNO Q 개발 워크플로우
+
+```
+1. App Lab 설치 (PC 또는 UNO Q 자체)
+       ↓
+2. Brick 선택 (객체 감지 / LLM / 웹서버 등)
+       ↓
+3. Python 코드 작성 (Linux 측 고수준 로직)
+       ↓
+4. Arduino Sketch 작성 (MCU 측 하드웨어 제어)
+       ↓
+5. 통합 실행 → NPU 자동 가속
+       ↓
+6. 스탠드얼론 배포 (UNO Q 단독 실행)
+```
+
+---
+
+### 💡 Arduino UNO Q 공모전 추천 작품 아이디어
+
+| 순위 | 작품명 | 사용 Brick / 기술 | 핵심 포인트 |
+|------|--------|-----------------|------------|
+| 1 | **AI 음성 제어 스마트홈** | Whisper Brick + LLM Brick + MCU 릴레이 | 완전 로컬 오프라인 동작 |
+| 2 | **실시간 자세 분석 피드백 시스템** | RTMPose Brick + Web Server Brick | 운동·재활 사회적 가치 |
+| 3 | **AI 비전 쓰레기 분류 로봇** | YOLOv8 Brick + Arduino Servo | 환경 + AI + 임베디드 |
+| 4 | **생성형 AI 스토리텔러 + LED** | LLM Brick + TTS + MCU LED 무드 | Generative AI 창의성 |
+| 5 | **오프라인 다국어 번역 디바이스** | Whisper Brick + LLM Local + TTS | 다국어·프라이버시 |
+| 6 | **AI 산업 이상 감지 시스템** | Edge Impulse Brick + 진동 센서 | 스마트 팩토리 주제 |
+
+---
+
+### 📊 Arduino UNO 시리즈 비교
+
+| 모델 | MCU | 주요 특징 | AI 적합도 |
+|------|-----|----------|----------|
+| **UNO R3** | ATmega328P 8bit / 16MHz | 기본 아두이노, 빠른 프로토타입 | ★☆☆☆☆ |
+| **UNO R4 Minima** | Renesas RA4M1 32bit / 48MHz | 가성비, CAN·RTC | ★★☆☆☆ |
+| **UNO R4 WiFi** | Renesas RA4M1 + ESP + LED 매트릭스 | Wi-Fi·BT·LED 매트릭스 | ★★★☆☆ |
+| **UNO Q** 🆕 | Qualcomm QRB2210 + STM32 | 40 TOPS NPU · 16GB RAM · Linux | ★★★★★ |
+
+---
+
+## 📚 학습 참고 자료
+
+| 자료 | 설명 | 링크 |
+|-----|------|------|
+| HuggingFace LeRobot 문서 | 로봇 AI 프레임워크 공식 문서 | [huggingface/lerobot](https://github.com/huggingface/lerobot) |
+| Edge Impulse Docs | TinyML 올인원 플랫폼 튜토리얼 | [docs.edgeimpulse.com](https://docs.edgeimpulse.com) |
+| DonkeyCar Docs | 자율주행 RC카 빌드 가이드 | [docs.donkeycar.com](https://docs.donkeycar.com) |
+| TinyML 한국어 자료 | 네이버 카페/블로그 TinyML 커뮤니티 | 검색: "TinyML 한국어" |
+| awesome-edge-ml | 엣지 ML 리소스 큐레이션 | [GitHub topic: embedded-machine-learning](https://github.com/topics/embedded-machine-learning) |
+| Arduino UNO Q 공식 | Arduino UNO Q 스펙·App Lab 가이드 | [arduino.cc/uno-q](https://www.arduino.cc/en/Main/arduinoBoardUnoQ/) |
+| Qualcomm AI Hub | 사전 최적화 AI 모델 카탈로그 | [aihub.qualcomm.com](https://aihub.qualcomm.com) |
+
+---
+
 > 📅 본 문서는 2026년 3월 23일 GitHub Trending 기준으로 작성되었습니다.
 > 트렌드는 빠르게 변화하므로 [GitHub Trending](https://github.com/trending)에서 최신 정보를 확인하세요.
 
