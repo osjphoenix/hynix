@@ -62,6 +62,17 @@
 - [💡 공모전 제출 전략](#-공모전-제출-전략)
 - [📚 참고 논문 & 자료](#-참고-논문--자료)
 
+### Part 5. Github Awesome Daily Discoveries (2026-03)
+- [🌟 주요 AI 프로젝트 스포트라이트](#-주요-ai-프로젝트-스포트라이트)
+- [📈 GitHub Trending Today #28](#-github-trending-today-28)
+- [📉 GitHub Trending Today #27](#-github-trending-today-27)
+- [🤖 Trending AI Projects #3](#-trending-ai-projects-3)
+- [🔥 Hacker News Show #2](#-hacker-news-show-2)
+- [🕵️ Hacker News Show #1](#-hacker-news-show-1)
+
+### 공통
+- [📚 학습 참고 자료](#-학습-참고-자료)
+
 ### 공통
 - [📚 학습 참고 자료](#-학습-참고-자료)
 
@@ -81,6 +92,8 @@
 | 8 | **AI 동영상 생성** | LLM 기반 숏폼 자동 생성 | ⭐⭐⭐⭐ |
 | 9 | **홈 자동화 / IoT** | Home Assistant, 오프라인 AI | ⭐⭐⭐ |
 | 10 | **AI 세금/회계** | LLM 영수증 분석, 재무 관리 | ⭐⭐⭐ |
+| 11 | **로컬 대형 모델 (VRAM 최적화)** | flash-moe, 온디바이스 400B | ⭐⭐⭐⭐⭐ |
+| 12 | **AI 에이전트 보안/샌드박스** | 0DIN, Zeroboot, NemoClaw | ⭐⭐⭐⭐⭐ |
 
 ---
 
@@ -1097,6 +1110,234 @@ Arduino UNO Q
 
 ---
 
-> 📅 본 문서는 2026년 3월 23일 GitHub Trending 기준으로 작성되었습니다.
-> 트렌드는 빠르게 변화하므로 [GitHub Trending](https://github.com/trending)에서 최신 정보를 확인하세요.
-> RuView GitHub: [https://github.com/ruvnet/ruview](https://github.com/ruvnet/ruview)
+---
+
+# 🚀 Part 5. Github Awesome Daily Discoveries (2026-03)
+
+> 출처: [https://githubawesome.com/](https://githubawesome.com/) | 2026년 3월 하순 요약 (총 169개 프로젝트)
+
+---
+
+## 🌟 주요 AI 프로젝트 스포트라이트
+
+| 프로젝트 | 설명 | 핵심 가치 |
+|---------|------|----------|
+| **[flash-moe](https://github.com/danveloper/flash-moe)** | 48GB 맥북에서 **400B 파라미터** 모델을 SSD 가속으로 실행 (4.4 t/s) | 로컬 AI 메모리 한계 극복 |
+| **[Zeroboot](https://github.com/zerobootdev/zeroboot)** | AI 에이전트용 sub-ms(0.8ms) 기동 Firecracker 마이크로VM | 보안 + 속도 동시 해결 |
+| **[Impeccable](https://github.com/pbakaus/impeccable)** | Claude Code를 위한 전문 디자인 디렉팅 스킬 | "Vibe Coding" 결과물 상향 평준화 |
+| **[Ghostling](https://github.com/ghostty-org/ghostling)** | Ghostty 터미널 엔진을 추출한 초경량 터미널 임베딩 엔진 | 게임·앱 내 터미널 통합 |
+| **[codebase-to-course](https://githubawesome.com/codebase-to-course/)** | 복잡한 코드베이스를 인터랙티브 HTML 코스로 변환 | 개발자 온보딩 혁신 |
+| **[OpenCLI](https://github.com/jackwener/opencli)** | 어떤 웹사이트든 로그인 세션을 유지한 채 CLI로 변환 | 데이터 추출 및 에이전트 활용 |
+
+---
+
+## 📈 GitHub Trending Today #28 (33 Repos)
+| No | 프로젝트 | 한 줄 요약 |
+|----|---------|-----------|
+| 1 | **Zeroboot** | 1ms 미만의 시작 속도를 가진 초경량 Firecracker 기반 AI 샌드박스 |
+| 2 | **Folio** | Go 언어 기반 제로 종속성 PDF 라이브러리 및 레이아웃 엔진 |
+| 3 | **Autonovel** | 컨셉 하나로 PDF, ePub, 오디오북까지 자동 생성하는 출판 파이프라인 |
+| 4 | **ASCII Studio** | 동영상을 브라우저용 ASCII 프레임으로 변환하여 재생 |
+| 5 | **Kimodo** | 700시간 모캡 데이터 학습 기반 실시간 동작 확산 모델 (NVIDIA) |
+| 6 | **7/24 Office** | 자가 진화 및 자가 복구가 가능한 3,500줄의 Python AI 에이전트 |
+| 7 | **Mails** | 이메일 노이즈를 제거하여 에이전트가 처리 가능한 클린 인터페이스 제공 |
+| 8 | **Memoria** | AI 에이전트 메모리를 위한 Git 스타일 브랜칭 및 스냅샷 시스템 |
+| 9 | **Sonar** | 로컬호스트 포트 점유 프로세스 시각화 및 제어 CLI 도구 |
+| 10 | **Chops** | AI 스킬 및 설정 파일을 관리하는 macOS 앱 |
+| 11 | **Emulate** | CI 환경용 외부 API 모킹 샌드박스 도구 (Vercel) |
+| 12 | **Ghostling** | 단일 C 파일 기반 초경량 터미널 임베딩 엔진 (Raylib) |
+| 13 | **My Brain Is Full Crew** | Obsidian용 10대 자동화 에이전트 팀 (이메일 및 링크 관리) |
+| 14 | **Diffity** | 로컬 Git 환경 내 AI 생성 코드 리뷰 및 자동 수정 툴 |
+| 15 | **Flash-MoE** | SSD 가속을 통한 초거대 모델(400B) 로컬 추론 엔진 |
+| 16 | **FilmKit** | 브라우저에서 후지필름 카메라 제어 및 RAW 현상 |
+| 17 | **Modly** | 이미지 기반 로컬 3D 메시 생성 macOS 앱 |
+| 18 | **0DIN Scanner** | AI 취약점 및 프롬프트 인젝션 취약점 스캐너 |
+| 19 | **LLM Circuit Finder** | 레이어 복제를 통한 모델의 논리 추론 강화 기법 |
+| 20 | **Oxyde** | Rust 코어 기반 초고속 비동기 Python ORM (Pydantic v2) |
+| 21 | **ReactMotion** | 소리에 반응하여 실시간 아바타 제스처 생성 |
+| 22 | **Context Gateway** | 컨텍스트 요약을 통한 50% 토큰 절감 게이트웨이 |
+| 23 | **Claude Peers MCP** | 여러 Claude Code 인스턴스 간 통신 서버 |
+| 24 | **Crust** | Bun 기반의 모듈형 초고속 부팅 TypeScript CLI 프레임워크 |
+| 25 | **Han** | 한글 키워드 기반 정적 타입 프로그래밍 언어 |
+| 26 | **SparkVSR** | 소수 키프레임 기반 비디오 해상도 자동 향상 모델 |
+| 27 | **GSAP AI Skills** | Claude Code용 전문가급 웹 애니메이션 스킬 세트 |
+| 28 | **ClawTeam-OpenClaw** | 멀티 에이전트 스웜 조정 및 협업 레이어 |
+| 29 | **Minutes** | 로컬 모델 기반 회의 녹음 및 자동 요약/작성 도구 |
+| 30 | **Unslop** | AI 특유의 기계적인 표현을 탐지하여 교정하는 유틸리티 |
+| 31 | **Drift** | Go 기반의 터미널용 ASCII/ANSI 아트 스크린세이버 |
+| 32 | **Clearly Markdown** | 심플한 타이포그래피 중심의 네이티브 macOS 마크다운 편집기 |
+| 33 | **HTMX VSCode Toolkit** | HTMX 개발용 인텔리센스 및 자동완성 확장 |
+
+---
+
+## 📉 GitHub Trending Today #27 (36 Repos)
+| No | 프로젝트 | 한 줄 요약 |
+|----|---------|-----------|
+| 1 | **Ichinichi** | 어제 쓴 일기는 수정할 수 없는 규칙을 적용한 기록 습관 형성 앱 |
+| 2 | **Recordly** | 클릭 줌인, 커서 애니메이션을 자동 처리하는 데모 영상 제작 툴 |
+| 3 | **Notchi** | 맥북 노치에서 AI 작업 상황에 반응하는 타마고치 스타일 캐릭터 |
+| 4 | **MiroFish-Offline** | 클라우드 없이 로컬에서 만 단위 AI로 세상을 시뮬레이션하는 엔진 |
+| 5 | **Gabagool** | 시간 여행 디버깅과 스냅샷 복제가 가능한 Rust 기반 WASM 도구 |
+| 6 | **Antfly** | 텍스트/벡터/그래프 검색을 단일 바이너리로 처리하는 RAG용 데이터베이스 |
+| 7 | **Horizon** | 터미널 창들을 Figma처럼 무한 캔버스에 배치하여 탐색하는 터미널 |
+| 8 | **Slug** | GPU 기반 고성능 텍스트 렌더링 알고리즘의 오픈소스(MIT) 버전 |
+| 9 | **OpenCLI** | 로그인 세션을 유지한 채 웹사이트를 CLI로 변환하는 확장 브릿지 |
+| 10 | **Slim** | Ngrok을 대체하는 무료 로컬 터널링 및 SSL 인증서 관리 도구 |
+| 11 | **Gitagent** | 에이전트의 프롬프트, 메모리, 규칙을 Git 저장소로 버전 관리 |
+| 12 | **AppGrid** | KDE Plasma 6용 고성능 풀스크린 그리드 스타일 앱 런처 |
+| 13 | **OpenOats** | 회의 중 실시간으로 내 로컬 메모와 연관 정보를 서칭하여 표시 |
+| 14 | **TUIStudio** | 터미널 UI 레이아웃을 드래그 앤 드롭으로 디자인하는 시각적 편집기 |
+| 15 | **Actrun** | CI/CD 파이프라인을 푸시 전 로컬에서 테스트하는 문빗(MoonBit) 기반 툴 |
+| 16 | **Altimate Code** | Snowflake, BigQuery 데이터 엔지니어링 전용 AI 코딩 어시스턴트 |
+| 17 | **Claw3D** | AI 에이전트들의 작업을 3D 가상 오피스로 실시간 시각화 |
+| 18 | **RX Data Store** | JSON보다 18배 작고 2만 배 빠른 바이너리 인코딩 데이터 포맷 |
+| 19 | **ApiArk** | 포스트맨을 대체하는 60MB 점유율의 Tauri+Rust 기반 API 클라이언트 |
+| 20 | **Impeccable** | 클로드에게 전문 프론트엔드 디자인 감각을 부여하는 스킬 |
+| 21 | **My Translator** | 중간 서버 없이 로컬에서 작동하는 실시간 음성 번역 데스크톱 앱 |
+| 22 | **Collaborator** | 터미널, 파일, 에이전트 작업을 무한 캔버스로 관리하는 워크스페이스 |
+| 23 | **OpenBrand** | URL 입력 시 해당 브랜드의 로고 및 컬러 팔레트를 자동 추출 |
+| 24 | **App Store Preflight** | 앱 제출 전 100여 개의 리뷰 가이드라인 위반 여부를 검사하는 스킬 |
+| 25 | **Lux** | 레디스(Redis)를 대체하는 Rust 기반 5.6배 빠른 초경량 DB |
+| 26 | **Fabro** | 키보드 중심 UI를 갖춘 오픈소스 AI 에이전트 오케스트레이션 대시보드 |
+| 27 | **Vpskit** | 한 줄의 명령어로 베어 메탈 VPS 설정을 자동 완료하는 배쉬 스크립트 |
+| 28 | **Radiant** | 80개 이상의 웹용 고성능 쉐이더(Particle, Fluid 등) 물리 엔진 |
+| 29 | **Meetscribe** | 줌, 팀즈 오디오를 캡처해 로컬 Whispher/Ollama로 요약 PDF 생성 |
+| 30 | **OpenShell** | 자율 에이전트 실행 시 시스템과 격리하는 NVIDIA 사의 샌드박스 런타임 |
+| 31 | **Paper-dl** | arXiv의 학술 논문 PDF를 검색 결과에서 자동으로 다운로드하는 도구 |
+| 32 | **Data-anim** | HTML 데이터 속성만으로 구현하는 3KB 미만의 스크롤 애니메이션 툴 |
+| 33 | **Element-source** | 브라우저 내 DOM 요소가 렌더링된 소스의 위치를 정확히 추적 |
+| 34 | **LATENT** | messsy한 영상 데이터로부터 인간의 움직임을 학습하는 테니스 로봇 모델 |
+| 35 | **Mori** | 워크트리별로 persistent한 터미널 상태를 유지하는 macOS 작업공간 |
+| 36 | **aurl** | API를 강타입 인터페이스로 변환하여 검증 후 호출하는 CLI 도구 |
+
+---
+
+## 🤖 Trending AI Projects #3 (35 Repos)
+| No | 프로젝트 | 한 줄 요약 |
+|----|---------|-----------|
+| 1 | **NVIDIA NemoClaw** | 안전한 샌드박스 내에서 에이전트를 구동하는 공식 NVIDIA 플러그인 |
+| 2 | **Code Review Graph** | 구조 그래프를 통해 수정 영향이 있는 파일만 AI에 전달하여 토큰 절감 |
+| 3 | **Nightingale** | 내 음악 파일을 보컬/악기 분리하고 노래방 가사를 자동 생성하는 앱 |
+| 4 | **Attention-Residuals** | 계층 심화에 따른 정보 희석을 막는 추론 효율화 아키텍처 (Moonshot AI) |
+| 5 | **Open Generative UI** | AI 채팅창 내에 인터랙티브 위젯과 3D 애니메이션 구현 프레임워크 |
+| 6 | **OpenViktor** | Viktor AI 동료 시스템의 오픈소스 자가 호스팅 대안 |
+| 7 | **AutoResearchClaw** | 문헌 수집부터 실험 코드 생성, LaTeX 논문 작성 프로세스 자율화 |
+| 8 | **learn-claude-code** | 12단계를 통해 현대식 에이전트 구축 프로세스를 직접 배우는 가이드 |
+| 9 | **Get Physics Done** | 물리 법칙의 일관성 및 경계 조건을 체크하는 물리 연구 전문 AI 리뷰어 |
+| 10 | **OpenHanako** | 잊혀지는 기억 시스템을 통해 인간다운 페르소나를 가진 에이전트 |
+| 11 | **ClaudePrism** | 연구 데이터를 위하지 않고 로컬 환경에서 논문을 작성하는 LaTeX 편집기 |
+| 12 | **Visualise** | AI 에이전트가 채팅 중 SVG 다이어그램과 차트를 직접 그려주는 스킬 |
+| 13 | **Prompt Master** | 잘못된 테크닉을 배제한 제로 웨이스트 고성능 프롬프트 생성기 |
+| 14 | **clsh** | 폰 브라우저로 내 로컬 터미널 작업 상황을 원격 모니터링 |
+| 15 | **Godogen** | 에셋 제작부터 디버깅까지 수행하여 자율적으로 게임을 개발하는 툴 |
+| 16 | **pi-generative-ui** | 터미널 에이전트용 고성능 팝업 위젯 UI 인터페이스 브릿지 |
+| 17 | **Clui CC** | Claude Code용 반투명 데스크톱 오버레이 UI 및 음성 제어 앱 |
+| 18 | **AgentChattr** | 에이전트 간 자유로운 소통과 업무 분담용 로컬 협업 채팅 시스템 |
+| 19 | **Claude Certified Architect** | MCP, Swarm 오케스트레이션 등 현대 AI 엔지니어링 스택 학습 가이드 |
+| 20 | **Helios** | 24시간 자율적 ML 실험 분석 및 최적화 연구 대행 에이전트 |
+| 21 | **RoboClaw** | 물리 로봇의 상태를 시각 감시하여 사고 및 이상 동작을 감지하는 엔진 |
+| 22 | **Claude Health** | AI 설정파일(CLAUDE.md) 및 스킬 상태의 건강성을 진단하는 툴 |
+| 23 | **Nuggets** | 단순 리스트가 아닌 복합 지식 그래프 형태의 에이전트 장기 메모리 |
+| 24 | **rt-claw** | 에이전트 스택 관리를 위한 초고속 크로스 플랫폼 에이전트 런처 |
+| 25 | **Autoresearch Genealogy** | 역사 데이터베이스와 인구 조사를 자율적으로 조사하고 가계도를 연결 |
+| 26 | **OpenRoom** | AI 에이전트가 브라우저 내의 가상 데스크톱 앱들을 직접 조작 |
+| 27 | **ClawTeam** | 다중 에이전트 스웜 지능을 터미널에 배치해 협업 업무 수행 |
+| 28 | **Open Brain (OB1)** | 내 모든 기록을 인덱싱해 MCP 기반으로 관리하는 AI 영구 지능 |
+| 29 | **Zeroboot** | 0.8ms의 기동률을 가진 고립된 AI 독립 샌드박스 인프라 |
+| 30 | **KAVACH** | AI 위협 명령 시 '가짜 공간'을 넘겨주어 실제 데이터를 보호하는 파일월 |
+| 31 | **Posterskill** | 논문 소스에서 내용을 추출해 인터랙티브 학술 포스터 자동 제작 |
+| 32 | **Codex Autoresearch** | 밤새 자가 수정 및 검증 루프를 돌리는 자율 엔지니어링 시스템 |
+| 33 | **TenacitOS** | 에이전트 구동 현황, 토큰 비용, 로그를 시각화하는 화려한 대시보드 |
+| 34 | **Finance Skills** | 금융 차트 분석 및 감성 분석 전문 에이전트 전용 기술 스택 |
+| 35 | **hf-agents** | 허깅페이스 생태계 AI를 로컬 하드웨어에 맞춰 즉시 기동하는 CLI |
+
+---
+
+## 🔥 Hacker News Show #2 (35 Repos) / #1 (30 Repos)
+### 🚀 Show HN #2 (최신 35개)
+| No | 프로젝트 | 한 줄 요약 |
+|----|---------|-----------|
+| 1 | **DD Photos** | Go+SvelteKit 기반 초고속 정적 사진 갤러리 생성 툴 |
+| 2 | **Threadprocs** | 프로세스 간 메모리 주소 공유 및 포인터 직접 전달 엔진 |
+| 3 | **Git Surgeon** | 에이전트의 지저분한 Git 커밋 히스토리를 깔끔하게 재정비 |
+| 4 | **GrobPaint** | macOS용 초경량 레이어 기반 이미지 편집기 (Electron 없음) |
+| 5 | **Agent Kernel** | 단순 폴더 구조로 에이전트의 지식과 정체성을 관리하는 프레임워크 |
+| 6 | **Zsweep** | Vim 키보드만으로 즐기는 초고속 지뢰찾기 게임 |
+| 7 | **AI Engineering** | 230개 레슨으로 구성된 AI 엔지니어링 전수 교육 커리큘럼 |
+| 8 | **ContextD** | 화면 OCR을 통해 내 업무 내용을 로컬 LLM이 실시간 요약 |
+| 9 | **ThermalMarky** | 영수증 프린터로 마크다운 문서를 출력하게 하는 웹 서버 |
+| 10 | **GOAL.md** | 측정 점수 향상 시까지 밤새 코드를 자가 수정하는 최적화 루프 |
+| 11 | **Crack** | 맥북 힌지 각도 센서 기반 실시간 문 여는 소리 조크 툴 |
+| 12 | **Agent-IM** | 여러 AI 에이전트가 MCP 기반 채팅방에서 협업하는 시스템 |
+| 13 | **AutoPrompter** | 측정 데이터 기반 프롬프트 최적화 및 정확도 검증 도구 |
+| 14 | **MCP-Scan** | MCP 서버 설정의 보안 취약점과 하드코딩된 키 진단 |
+| 15 | **M33mu** | 펌웨어 개발용 ARM Cortex-M33 에뮬레이터 (역주행 디버깅) |
+| 16 | **Z1** | 실행 중인 리액트 앱을 AI 에이전트가 직접 조작하여 테스트 |
+| 17 | **Refrax** | GPU 메모리 공유로 수백 개 탭을 띄워도 램 점유가 하나인 브라우저 |
+| 18 | **FlowState** | 주말 후에도 에이전트가 이전 맥락을 이어가게 돕는 컨텍스트 서버 |
+| 19 | **Mamba-rs** | Rust+CUDA 기반 맘바 SSM 추론 및 훈련 엔진 |
+| 20 | **Meow-SSH** | 고양이 테마의 터미널 UI SSH 연결 관리자 |
+| 21 | **Jensenify-MCP** | 모든 AI 호출에 고전 문학 텍스트를 주입하는 실험적 툴 |
+| 22 | **Mnesis** | 백엔드 앱용 경량 상태 및 영속성 관리 파이썬 라이브러리 |
+| 23 | **Mnemo** | 에이전트 간 메모리 이식 및 관리를 수행하는 로컬 CLI |
+| 24 | **ez-stack** | 복잡한 Stacked PR 워크플로우를 표준 Git 명령어로 관리 |
+| 25 | **Samuel** | 화면 인식을 제어해 전자책을 읽고 요약/낭독하는 독립 에이전트 |
+| 26 | **Revise.io** | AI 교정을 포함한 스타일 보정 협업 문서 편집 플랫폼 |
+| 27 | **Smriti** | 에이전트 실행 경로 브랜칭 및 메모리 관리 체크포인트 시스템 |
+| 28 | **Wireframed.js** | 실서비스 웹사이트를 한 줄의 코드로 드로잉 와이어프레임화 |
+| 29 | **Brand Toolkit** | 전문가 방법론 기반 브랜드 포지셔닝용 자율 AI 스킬 |
+| 30 | **DockAutoHide** | 필요 시에만 메인 독을 선별적으로 숨겨주는 유틸리티 |
+| 31 | **Codex Claude Bridge** | 클로드 코드와 코덱스(OpenAI) 간 실시간 통신 가교 |
+| 32 | **Wet** | 토큰 임계점 도달 시 스스로 context를 압축하는 Go 프록시 |
+| 33 | **CellState** | 화면 깜빡임 없는 초고속 터미널 렌더링 라이브러리 |
+| 34 | **Skill Lab** | 에밀 코발스키의 디자인 감각을 주입한 AI 디자인 스킬 |
+| 35 | **claudebox** | 정액 계정을 AI 도구 백엔드로 활용하는 도커 샌드박스 |
+
+### 🚀 Show HN #1 (최신 30개)
+| No | 프로젝트 | 한 줄 요약 |
+|----|---------|-----------|
+| 1 | **Termcraft** | 터미널 안에서 돌아가는 풀 2D 샌드박스 서바이벌 게임 |
+| 2 | **Switchboard** | 여러 분산된 에이전트 세션을 프로젝트별로 관리하는 데스크톱 앱 |
+| 3 | **Fortransky** | Bluesky SNS 클라이언트를 현대 포트란(Fortran)으로 구현 |
+| 4 | **pi-worker** | 터미널 기반 자율적 멀티스텝 작업 실행 파이프라인 에이전트 |
+| 5 | **Entroly** | 엔트로피 점수 기반 컨텍스트 최적화로 토큰 80% 절감 도구 |
+| 6 | **rsloop** | 윈도우용 초고속 Python 비동기 이벤트 루프 (Rust 기반) |
+| 7 | **GoldenMatch** | 퍼지 로직과 소형 LLM 기반 고성능 에이전트 매칭 툴 |
+| 8 | **ps2-llm** | 플레이스테이션 2 하드웨어에서 LLM 추론 구현 성공 사례 |
+| 9 | **Banish** | Rust 정적 머신 정의 매크로 및 선언적 상태 전이 시스템 |
+| 10 | **Batear** | 15불 장비로 드론 프로펠러 소음을 감지하는 오프라인 보안 시스템 |
+| 11 | **Orchestrator** | 튜먹스 스타일의 멀티 에이전트 협업 및 모니터링 대시보드 |
+| 12 | **QueryPad** | DuckDB 기반 브라우저 내 로컬 데이터 SQL 쿼리 분석 툴 |
+| 13 | **Inner Warden** | eBPF 기반 커널 침입 차단 및 허니팟 배포형 보안 시스템 |
+| 14 | **NC Web** | 고전 노턴 커맨더 UI를 웹 브라우저에서 완벽 복원 |
+| 15 | **filenotes.nvim** | 네오빔 파일별 자동 생성 전용 사이드바 메모 확장 앱 |
+| 16 | **AI SDLC Scaffold** | AI 에이전트의 코드 작성 전 설계를 강제하는 개발 수명 주기 템플릿 |
+| 17 | **Capit** | AI 에이전트 사용 예산 한도 설정 및 자동 차단 보안 도구 |
+| 18 | **MakhalReader** | 로컬 LLM 학습을 통한 개인 맞춤형 고신호 RSS 리더 (Ollama 기반) |
+| 19 | **VideoZero Skills** | AI 에이전트용 웹킷 기반 영상 제작 및 애니메이션 편집 스킬 |
+| 20 | **Woti** | 타임존별 최적 협업 시간을 그래프로 찾아주는 터미널 유틸리티 |
+| 21 | **Elastik** | 샌드박스 기반 보안 원칙을 적용한 AI-웹 상호작용 레이어 |
+| 22 | **React Container Kit** | 리액트 컨테이너 보일러플레이트를 선언적으로 제거하는 킷 |
+| 23 | **Agent Password** | 터치ID 인증을 통한 에이전트 전용 키 권한 관리 프로그램 |
+| 24 | **Nya AI** | 팀 협업용 오픈소스 AI 워크스페이스 (파일 및 문서 직접 조작) |
+| 25 | **Scrum Template** | AI가 이슈 분석과 티켓 분배를 수행하는 자율 스크럼 마스터 |
+| 26 | **Rover** | 웹사이트 양식 입력 및 네비게이션을 수행하는 AI 웹 에이전트 |
+| 27 | **CYCLE** | 실제 딥워크 시간에 비례하여 휴식 시간을 계산하는 스마트 타이머 |
+| 28 | **OpenHarness** | 오버헤드 없는 에이전트 위임 워크플로우 통합 라이브러리 |
+| 29 | **Sift** | 대량의 로그를 압축하여 핵심 디버깅 신호만 추출 (토큰 최적화) |
+| 30 | **Skill Lab** | 작성한 에이전트 스킬 파일의 실제 작동 여부를 진단하는 린터 |
+
+---
+
+## 🔑 AI 2026 핵심 기술 요약 (Github Awesome 반영)
+```
+1. 🛡️ 에이전트 생존권(Sandbox) : AI 에이전트가 안전하게 코드를 실행할 'Zero-lag 샌드박스(Zeroboot)'가 필수 인프라로 안착.
+2. 🦾 로컬 초거대 모델 : SSD-to-GPU 스트리밍 기법(flash-moe)으로 일반 맥북에서도 400B급 모델 구동 가능해짐.
+3. 🧑‍🎨 디자인 완성도(Design Skill) : AI가 짠 '생기 없는 코드'를 거부하고 고품질 UI를 뽑게 하는 '디자인 전문 스킬(Impeccable)' 도입.
+4. 🧠 메모리 구조화 : 단순 챗 이력이 아닌 'Git 브랜치 스타일의 메모리(Memoria, Smriti)'로 에이전트의 상황 인지 능력 고도화.
+5. 🛡️ 보안 자동화 : AI 에이전트의 프롬프트 인젝션을 막는 전용 파일월(KAVACH) 및 스캐너(0DIN) 등장.
+```
+
+---
+
+> 📅 본 문서는 2026년 3월 25일 GitHub Trending 및 Github Awesome 실시간 데이터를 바탕으로 최종 업데이트되었습니다.
