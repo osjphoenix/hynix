@@ -328,6 +328,24 @@ LLM이 영수증·거래 내역을 자동 분석·분류하는 셀프호스팅 �
 
 ## 🤖 AI 임베디드 작품 조사
 
+### 🚀 최신 GitHub Trending 임베디드/하드웨어 핫 프로젝트 (2026-03)
+
+최근 GitHub 및 Github Awesome에서 가장 주목받는 임베디드, IoT, 하드웨어 제어 관련 핫 프로젝트 모음입니다.
+
+| 랭킹 | 프로젝트 & 하드웨어 | 설명 | 기술 스택 / 타겟 |
+|------|------------------|------|---------------|
+| 🔥 | **[wasm-micro-runtime](https://github.com/bytecodealliance/wasm-micro-runtime)** | 임베디드 기기를 위한 초경량 WebAssembly 런타임. 하드웨어 독립적인 엣지 AI/앱 실행에 강력함. | **MCU, WebAssembly** |
+| 🔥 | **[M33mu](https://github.com/danielinux/m33mu)** | 펌웨어 개발자를 위한 ARM Cortex-M33 전용 에뮬레이터. 타겟 보드 없이 역추적 디버깅 가능. | **ARM Cortex-M33, C** |
+| 🔥 | **[Batear](https://github.com/TN666/batear)** | 15불짜리 ESP32와 마이크 하나로 드론 프로펠러 소음을 식별하는 초저전력 오프라인 방공 시스템. | **ESP32, MicroPhone** |
+| 🚀 | **[Zeroboot](https://github.com/zerobootdev/zeroboot)** | 1ms 미만의 기동 속도를 자랑하는 초소형 Firecracker 샌드박스. 엣지 디바이스의 AI 프로세스 격리에 활용. | **Firecracker, Linux** |
+| 🚀 | **[RoboClaw](https://github.com/MINT-SJTU/RoboClaw)** | 물리 로봇의 시야를 통해 크래시 및 작동 오류를 감지하고 복구를 돕는 비전 기반 오버사이트 엔진. | **물리 로봇, Vision AI** |
+| ⭐ | **[LATENT](https://github.com/GalaxyGeneralRobotics/LATENT)** | 야외 5시간 분량의 영상만으로 인간의 몸놀림을 학습하여 물리 테니스 로봇을 제어하는 프레임워크. | **로보틱스, Imitation ML** |
+| ⭐ | **[Ghostling](https://github.com/ghostty-org/ghostling)** | 앱 혹은 제한적 인터페이스 내에 초고속 터미널을 통째로 내장(Embed)할 수 있는 C 기반 가벼운 엔진. | **C, Raylib** |
+| ⭐ | **[Atmosphere](https://github.com/Atmosphere-NX/Atmosphere)** | 닌텐도 스위치용 C++ 기반 오픈소스 커스텀 펌웨어. 펌웨어 역공학 및 로우레벨 제어의 참고서. | **Nintendo Switch, C++** |
+
+---
+
+
 ### 📊 AI 임베디드 분야 요약
 
 | 분야 | 플랫폼 | 난이도 | 추천도 |
