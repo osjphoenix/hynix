@@ -1,3 +1,31 @@
+// ==========================================
+// 💡 [사용자 설정 변수] 문구를 쉽게 변경하세요!
+// ==========================================
+// 프레임 바깥쪽 메인 문구들 (입력창 기본값)
+const DEFAULT_TOP_TEXT = "Sogang Studio";
+const DEFAULT_SUB_TEXT = "#Open Campus #진로 멘토링";
+const DEFAULT_BOTTOM_TEXT = "SOGANG FOUR CUTS";
+
+// 사진 안쪽 오버레이 고정 문구
+const SLOT_BOTTOM_RIGHT_TEXTS = [           // 사진 오른쪽 하단 문구 (컷마다 순차적용)
+    "memory 1", "memory 2", "memory 3", "memory 4",
+    "memory 5", "memory 6", "memory 7", "memory 8"
+];
+
+// 프레임 맨 아래 하단 문구
+const FOOTER_TEXT = "Be as proud of Sogang as Sogang is proud of you";
+
+const frameColors = [
+    { bg: "#FFE4E1", text: "#D87093", pastel: "#FFF0F5" }, // 0: 빨강
+    { bg: "#D4E6F1", text: "#2980B9", pastel: "#EBF5FB" }, // 1: 파랑
+    { bg: "#D1F2EB", text: "#16A085", pastel: "#E8F8F5" }, // 2: 초록
+    { bg: "#FFF8DC", text: "#D35400", pastel: "#FEF9E7" }, // 3: 노랑
+    { bg: "#E8DAEF", text: "#8E44AD", pastel: "#F5EEF8" }, // 4: 보라
+    { bg: "#FFFFFF", text: "#2C3E50", pastel: "#F8F9FA" }  // 5: 화이트
+];
+// ==========================================
+
+
 let port;
 let video = null;
 let frameImg;
@@ -36,15 +64,6 @@ let frameTop = 95;
 let frameW = 290;
 let frameH = 570;
 let sidebarX = 330;
-
-const frameColors = [
-    { bg: "#FFE4E1", text: "#D87093", pastel: "#FFF0F5" }, // 0: 로즈
-    { bg: "#D4E6F1", text: "#2980B9", pastel: "#EBF5FB" }, // 1: 블루
-    { bg: "#FFF8DC", text: "#D35400", pastel: "#FEF9E7" }, // 2: 크림
-    { bg: "#FFFFFF", text: "#2C3E50", pastel: "#F8F9FA" }, // 3: 화이트
-    { bg: "#E8DAEF", text: "#8E44AD", pastel: "#F5EEF8" }, // 4: 모브
-    { bg: "#D1F2EB", text: "#16A085", pastel: "#E8F8F5" }  // 5: 민트
-];
 let currentFrameColor = 0;
 
 function setup() {
@@ -56,9 +75,10 @@ function setup() {
     saveBtn = createButton("QR코드 출력");
     clearStickerBtn = createButton("다시 꾸미기");
 
-    topInput = createInput("TEAM 1");
-    subInput = createInput("SUMMER COMEBACK");
-    bottomInput = createInput("K-POP FOUR CUTS");
+    // 상단 변수를 활용하여 기본 문구 설정
+    topInput = createInput(DEFAULT_TOP_TEXT);
+    subInput = createInput(DEFAULT_SUB_TEXT);
+    bottomInput = createInput(DEFAULT_BOTTOM_TEXT);
 
     connectBtn.mousePressed(connectSerial);
     retakeBtn.mousePressed(retake);
@@ -90,9 +110,9 @@ function updateLayout(cuts) {
     totalShots = cuts;
     slots = [];
 
-    if (cuts === 4) bottomInput.value("K-POP FOUR CUTS");
-    else if (cuts === 6) bottomInput.value("K-POP SIX CUTS");
-    else if (cuts === 8) bottomInput.value("K-POP EIGHT CUTS");
+    if (cuts === 4) bottomInput.value(DEFAULT_BOTTOM_TEXT);
+    else if (cuts === 6) bottomInput.value("SOGANG SIX CUTS");
+    else if (cuts === 8) bottomInput.value("SOGANG EIGHT CUTS");
 
     let cols = (cuts === 4) ? 1 : 2;
     let rows = Math.ceil(cuts / cols);
@@ -308,15 +328,16 @@ function externalTakePhoto() {
 }
 
 function drawLiveBooth() {
-    drawFrameBase();
+    drawFrameBase(); // 빈 프레임 배경 렌더링
 
     let theme = frameColors[currentFrameColor];
+
+    // 1. 찍힌 사진들 그리기
     for (let i = 0; i < photos.length; i++) {
         drawImageCover(photos[i], slots[i].x, slots[i].y, slots[i].w, slots[i].h);
-        drawSlotOverlays(slots[i].x, slots[i].y, slots[i].w, slots[i].h, i, theme);
     }
 
-    // ⭐ [수정] 대기 상태('ready')가 아닐 때(촬영이 시작된 후)에만 비디오와 노란색 활성화 테두리를 그립니다.
+    // 2. 현재 촬영 중인 슬롯에 라이브 비디오 및 테두리 표시
     if (state !== "ready" && currentShot < totalShots) {
         let s = slots[currentShot];
         drawVideoCover(s.x, s.y, s.w, s.h);
@@ -325,6 +346,12 @@ function drawLiveBooth() {
         strokeWeight(5);
         rect(s.x, s.y, s.w, s.h);
     }
+
+    // 3. 모든 슬롯에 (빈칸이든 영상이든 사진이든) 오버레이 문구 항상 표시
+    for (let i = 0; i < slots.length; i++) {
+        drawSlotOverlays(slots[i].x, slots[i].y, slots[i].w, slots[i].h, i, theme);
+    }
+
     if (state === "countdown") drawCountdown();
     if (state === "flash") drawFlash();
 }
@@ -347,11 +374,11 @@ function drawFrameBase() {
 
     fill(theme.text); noStroke(); textAlign(CENTER, CENTER);
     textSize(22); textStyle(BOLD);
-    let tText = topInput.value() || "TEAM 1";
+    let tText = topInput.value() || DEFAULT_TOP_TEXT;
     text(tText, centerX, 35);
 
     textSize(15);
-    let sText = subInput.value() || "SUMMER COMEBACK";
+    let sText = subInput.value() || DEFAULT_SUB_TEXT;
     text(sText, centerX, 62);
 
     fill(255);
@@ -359,10 +386,10 @@ function drawFrameBase() {
     rect(frameLeft, frameTop, frameW, frameH);
 
     fill(theme.text); noStroke(); textSize(14); textStyle(BOLD);
-    let bText = bottomInput.value() || "K-POP FOUR CUTS";
+    let bText = bottomInput.value() || DEFAULT_BOTTOM_TEXT;
     text(bText, centerX, frameTop + 24);
 
-    // ⭐ 사진 찍기 전 빈 슬롯 배경
+    // 빈 슬롯 배경
     for (let i = 0; i < slots.length; i++) {
         let s = slots[i];
         if (i >= photos.length) {
@@ -370,42 +397,62 @@ function drawFrameBase() {
             noStroke();
             rect(s.x, s.y, s.w, s.h);
 
+            // 대기중 텍스트
             fill(theme.text); noStroke(); textSize(13); textStyle(NORMAL);
             text(`CUT ${i + 1}`, s.x + s.w / 2, s.y + s.h / 2);
         }
     }
 
+    // 맨 하단 고정 문구
     fill(theme.text); textSize(10); textStyle(NORMAL);
-    text("blue filter · star stickers · summer mood", centerX, frameTop + frameH - 22);
+    text(FOOTER_TEXT, centerX, frameTop + frameH - 22);
 }
 
 function drawSlotOverlays(x, y, w, h, index, theme) {
     let isSmall = (w < 200);
 
+    // 모서리 별 모양
     drawWhiteStar(x + w - (isSmall ? 15 : 22), y + (isSmall ? 15 : 22), isSmall ? 10 : 16);
     drawWhiteStar(x + (isSmall ? 15 : 22), y + h - (isSmall ? 15 : 20), isSmall ? 8 : 12);
 
+    // -------------------------
+    // ✨ 1. 왼쪽 상단 문구 (입력창과 연동됨)
+    // -------------------------
     push();
+    // 사용자가 변경한 입력창 문구를 바로 가져와서 사진 왼쪽 상단에도 적용합니다.
+    let badgeText = topInput.value() || DEFAULT_TOP_TEXT;
+    textSize(isSmall ? 6 : 9);
+    textStyle(BOLD);
+
+    // 텍스트 길이에 맞춰 박스 너비 자동 계산 (양옆 여백 추가)
+    let paddingX = isSmall ? 10 : 16;
+    let badgeW = textWidth(badgeText) + paddingX;
+    let badgeH = isSmall ? 14 : 20;
+
     rectMode(CORNER); noStroke(); fill(theme.text);
-    let badgeW = isSmall ? 65 : 95;
-    let badgeH = isSmall ? 12 : 16;
     rect(x + (isSmall ? 6 : 10), y + (isSmall ? 6 : 10), badgeW, badgeH);
 
-    fill(255); textAlign(CENTER, CENTER); textSize(isSmall ? 5 : 7.5); textStyle(BOLD);
-    let badgeText = subInput.value() || "SUMMER COMEBACK";
+    fill(255); textAlign(CENTER, CENTER);
     text(badgeText, x + (isSmall ? 6 : 10) + badgeW / 2, y + (isSmall ? 6 : 10) + badgeH / 2);
     pop();
 
-    const cutLabels = ["DEBUT", "SUMMER", "STAGE", "ENDING FAIRY", "BEHIND", "FINALE", "ENCORE", "WORLD TOUR"];
-    let labelText = `CUT ${index + 1} · ${cutLabels[index % cutLabels.length]}`;
-
+    // -------------------------
+    // ✨ 2. 오른쪽 하단 고정 문구
+    // -------------------------
     push();
+    let labelText = SLOT_BOTTOM_RIGHT_TEXTS[index % SLOT_BOTTOM_RIGHT_TEXTS.length];
+    textSize(isSmall ? 6.5 : 8.5);
+    textStyle(BOLD);
+
+    // 텍스트 길이에 맞춰 박스 너비 자동 계산 (양옆 여백 추가)
+    let lblPaddingX = isSmall ? 10 : 16;
+    let lblW = textWidth(labelText) + lblPaddingX;
+    let lblH = isSmall ? 12 : 18;
+
     rectMode(CORNER); fill(255, 240); noStroke();
-    let lblW = isSmall ? 55 : 68;
-    let lblH = isSmall ? 10 : 14;
     rect(x + w - lblW - (isSmall ? 6 : 10), y + h - lblH - (isSmall ? 6 : 10), lblW, lblH);
 
-    fill(theme.text); textAlign(CENTER, CENTER); textSize(isSmall ? 5.5 : 7); textStyle(BOLD);
+    fill(theme.text); textAlign(CENTER, CENTER);
     text(labelText, x + w - lblW / 2 - (isSmall ? 6 : 10), y + h - lblH / 2 - (isSmall ? 6 : 10));
     pop();
 }
@@ -442,13 +489,17 @@ function drawFinalBooth(forSave) {
     drawFrameBase();
 
     let theme = frameColors[currentFrameColor];
+    // 사진 먼저 그리고
     for (let i = 0; i < photos.length; i++) {
         drawImageCover(photos[i], slots[i].x, slots[i].y, slots[i].w, slots[i].h);
-        drawSlotOverlays(slots[i].x, slots[i].y, slots[i].w, slots[i].h, i, theme);
     }
 
+    // 오버레이 및 흰색 테두리를 그 위에 그리기
     for (let i = 0; i < slots.length; i++) {
-        let s = slots[i]; noFill(); stroke(255, 255, 255, 180); strokeWeight(2);
+        let s = slots[i];
+        drawSlotOverlays(s.x, s.y, s.w, s.h, i, theme);
+
+        noFill(); stroke(255, 255, 255, 180); strokeWeight(2);
         rect(s.x, s.y, s.w, s.h);
     }
     for (let i = 0; i < stickers.length; i++) drawSticker(stickers[i].type, stickers[i].x, stickers[i].y, stickers[i].size, stickers[i].angle);
