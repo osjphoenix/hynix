@@ -87,17 +87,10 @@ LGFX_Sprite sprite(&tft);
 // =====================================================================
 // 2. 색상 정의
 // =====================================================================
-#define BROWN   0x8A22
 #define BLACK   0x0000
 #define WHITE   0xFFFF
-#define RED     0xF800
+#define RED     0xF800 
 #define HILITE  0xF544 
-
-#define ROSE    0xD4B5
-#define BLUE    0x8476
-#define CREAM   0xEED6
-#define MAUVE   0xC410
-#define MINT    0x9736
 
 // =====================================================================
 // 3. 전역 상태 변수
@@ -183,12 +176,12 @@ void page3() {
   printTxt(270, 84, "sgu-2026", BLACK);
 
   printTxt(25, 117, "색상", BLACK);
-  if (color == 0) printTxt(288, 117, "로즈", BLACK);
-  if (color == 1) printTxt(288, 117, "블루", BLACK);
-  if (color == 2) printTxt(288, 117, "크림", BLACK);
-  if (color == 3) printTxt(288, 117, "화이트", BLACK);
-  if (color == 4) printTxt(278, 117, "모브", BLACK);
-  if (color == 5) printTxt(288, 117, "민트", BLACK);
+  if (color == 0) printTxt(288, 117, "빨강", BLACK);
+  if (color == 1) printTxt(288, 117, "파랑", BLACK);
+  if (color == 2) printTxt(288, 117, "초록", BLACK);
+  if (color == 3) printTxt(288, 117, "노랑", BLACK);
+  if (color == 4) printTxt(288, 117, "보라", BLACK);
+  if (color == 5) printTxt(278, 117, "화이트", BLACK);
 
   printTxt(20, 149, "컷", BLACK);
   printTxt(288, 149, String(photo) + "컷", BLACK);
